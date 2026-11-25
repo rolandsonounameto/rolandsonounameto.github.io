@@ -1,0 +1,120 @@
+/* ---------- Tokens ---------- */
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --text: #1d2321;
+  --muted: #5f6b66;
+  --line: #e4e1da;
+  --accent: #0f6b5c;      /* deep teal */
+  --accent-soft: #e3f1ed;
+  --max: 920px;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141816;
+    --surface: #1b201e;
+    --text: #e9ece9;
+    --muted: #a3ada8;
+    --line: #2c3330;
+    --accent: #5fc4ad;
+    --accent-soft: #1f3530;
+  }
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 var(--sans);
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { font-family: var(--serif); line-height: 1.2; font-weight: 600; }
+h1 { font-size: clamp(2rem, 5vw, 2.9rem); margin: 0 0 .6rem; }
+h2 { font-size: 1.55rem; margin: 3.2rem 0 1.2rem; }
+h3 { font-size: 1.12rem; margin: 0 0 .3rem; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  position: sticky; top: 0; z-index: 10;
+}
+.site-header .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px;
+}
+.logo { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; color: var(--text); }
+.logo span { color: var(--accent); }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: .2rem 1.3rem; margin: 0; padding: 0; }
+nav a { color: var(--muted); font-size: .95rem; }
+nav a:hover, nav a[aria-current="page"] { color: var(--text); text-decoration: none; }
+nav a[aria-current="page"] { border-bottom: 2px solid var(--accent); }
+
+/* ---------- Hero ---------- */
+.hero { padding: 4.5rem 0 1rem; display: grid; grid-template-columns: 1fr 180px; gap: 2.5rem; align-items: center; }
+.hero .tagline { font-size: 1.2rem; color: var(--muted); max-width: 38rem; margin: 0; }
+.avatar {
+  width: 180px; height: 180px; border-radius: 50%; object-fit: cover;
+  background: var(--accent-soft); border: 1px solid var(--line);
+}
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; color: var(--accent); font-weight: 600; margin: 0 0 .8rem; }
+.btn-row { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
+.btn {
+  display: inline-block; padding: .55rem 1.1rem; border-radius: 6px;
+  border: 1px solid var(--accent); font-size: .92rem; font-weight: 500;
+}
+.btn.primary { background: var(--accent); color: var(--bg); }
+.btn:hover { text-decoration: none; opacity: .88; }
+
+/* ---------- Numbered items ---------- */
+.numbered { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.2rem; padding: 0; margin: 0; list-style: none; }
+.numbered li { border-top: 2px solid var(--text); padding-top: .9rem; }
+.numbered .num { font-family: var(--serif); color: var(--accent); font-size: 1.1rem; font-weight: 700; display: block; margin-bottom: .3rem; }
+.numbered p { margin: .2rem 0 0; color: var(--muted); font-size: .95rem; }
+
+/* ---------- Lists of items (papers, posts, projects) ---------- */
+.items { list-style: none; padding: 0; margin: 0; }
+.items li { padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+.items li:first-child { border-top: 1px solid var(--line); }
+.meta { font-size: .82rem; color: var(--muted); margin-bottom: .25rem; }
+.tag {
+  display: inline-block; background: var(--accent-soft); color: var(--accent);
+  font-size: .74rem; font-weight: 600; padding: .1rem .5rem; border-radius: 4px; margin-right: .4rem;
+}
+.items p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+.more { display: inline-block; margin-top: 1rem; font-weight: 500; }
+
+/* ---------- Prose pages ---------- */
+.page { padding: 3.5rem 0 1rem; }
+.page .lead { font-size: 1.15rem; color: var(--muted); }
+.page ul.bullets li { margin-bottom: .45rem; }
+.filters { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 1.5rem; }
+.filters button {
+  font: inherit; font-size: .88rem; cursor: pointer; background: transparent; color: var(--muted);
+  border: 1px solid var(--line); border-radius: 99px; padding: .3rem .9rem;
+}
+.filters button.active { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+/* ---------- Footer ---------- */
+.site-footer { margin-top: 5rem; border-top: 1px solid var(--line); padding: 2.2rem 0 3rem; font-size: .9rem; color: var(--muted); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; align-items: center; }
+.profile-card { display: flex; gap: .9rem; align-items: center; }
+.profile-card img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; background: var(--accent-soft); }
+.profile-card strong { color: var(--text); display: block; }
+.social { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .hero { grid-template-columns: 1fr; padding-top: 2.5rem; gap: 1.5rem; }
+  .hero .avatar { order: -1; width: 120px; height: 120px; }
+  .site-header { position: static; }
+}
