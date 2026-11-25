@@ -20,7 +20,7 @@
         <li><a href="./">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="publications.html" aria-current="page">Publications</a></li>
-        <li><a href="writing.html">Writing</a></li>
+        <li><a href="talks.html">Talks</a></li>
         <li><a href="about.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -28,32 +28,58 @@
 </header>
 
 <main class="wrap page">
-  <h1>Publications, talks and posters</h1>
-  <p class="lead">Full list also on <a href="#">Google Scholar</a> and <a href="#">ORCID</a>.</p>
+  <h1>Publications</h1>
+  <p class="lead">Peer-reviewed articles, preprints and work in preparation. Talks and workshops are on the <a href="talks.html">Talks</a> page.</p>
 
   <div class="filters" role="group" aria-label="Filter by type">
     <button class="active" data-filter="all">All</button>
-    <button data-filter="paper">Papers</button>
-    <button data-filter="talk">Talks</button>
-    <button data-filter="poster">Posters</button>
+    <button data-filter="malaria">Malaria</button>
+    <button data-filter="article">Peer-reviewed</button>
+    <button data-filter="preprint">Preprints</button>
+    <button data-filter="prep">In preparation</button>
   </div>
 
-  <!-- EDIT: one <li> per output. Set data-type to paper, talk or poster. -->
+  <!-- One <li> per output. data-type: article, preprint or prep. Add "malaria" for malaria papers. -->
   <ul class="items" id="pub-list">
-    <li data-type="paper">
-      <div class="meta"><span class="tag">Paper</span>[Year] · [Journal]</div>
-      <h3><a href="#">[Title of paper]</a></h3>
-      <p>[Authors, with your name in bold]. <a href="#">DOI</a> · <a href="#">PDF</a></p>
+    <li data-type="prep malaria">
+      <div class="meta"><span class="tag">In preparation</span>2026</div>
+      <h3>A joint parameterisation of seasonal malaria chemoprevention protective decay across multiple trials, and its application to a cascade of effectiveness framework</h3>
+      <p><strong>Sonounameto RC</strong>, Champagne C, Filippini B, Damien BG, Glèlè Kakaï R, Pothin E.</p>
     </li>
-    <li data-type="talk">
-      <div class="meta"><span class="tag">Talk</span>[Year] · [Conference, city]</div>
-      <h3><a href="#">[Title of talk]</a></h3>
-      <p>[Short description.] <a href="#">Slides</a></p>
+    <li data-type="preprint malaria">
+      <div class="meta"><span class="tag">Preprint</span>2026 · VeriXiv 3:346</div>
+      <h3><a href="https://doi.org/10.12688/verixiv.3944.1">Using routine case data to estimate effectiveness of Seasonal Malaria Chemoprevention during phased introduction in Nampula: a controlled interrupted time-series analysis</a></h3>
+      <p>Sambo TA, <strong>Sonounameto RC</strong>, Pedro SA, Mirau S, Baker K, Enosse S, et al.</p>
     </li>
-    <li data-type="poster">
-      <div class="meta"><span class="tag">Poster</span>[Year] · [Conference, city]</div>
-      <h3><a href="#">[Title of poster]</a></h3>
-      <p>[Short description.] <a href="#">Poster PDF</a></p>
+    <li data-type="article malaria">
+      <div class="meta"><span class="tag">Article</span>2026 · BMJ Public Health 4:e004335</div>
+      <h3><a href="https://doi.org/10.1136/bmjph-2025-004335">Assessing the effectiveness of seasonal malaria chemoprevention on malaria burden among children under 5 in northern Benin: a statistical modelling approach</a></h3>
+      <p><strong>Sonounameto RC</strong>, Damien BG, Sambo TA, Houndjo W, Aissan J, Aikpon R, et al.</p>
+    </li>
+    <li data-type="article">
+      <div class="meta"><span class="tag">Article</span>2026 · Trees, Forests and People 27:101453</div>
+      <h3><a href="https://doi.org/10.1016/j.tfp.2026.101453"><em>Conocarpus erectus</em> L., a neglected mangrove species in West Africa: traditional knowledge, its transmission and implications for conservation in Benin</a></h3>
+      <p>Kakaï FG, Salako KV, Gnansounou SC, <strong>Sonounameto RC</strong>, Zanvo SM, Akouété PLE, et al.</p>
+    </li>
+    <li data-type="article malaria">
+      <div class="meta"><span class="tag">Article</span>2025 · BMJ Open 15:e101375</div>
+      <h3><a href="https://doi.org/10.1136/bmjopen-2025-101375">Spatial and spatio-temporal analysis for malaria hotspot identification: a scoping review protocol</a></h3>
+      <p>Monteiro GM, <strong>Sonounameto RC</strong>, Djogbenou LS, et al.</p>
+    </li>
+    <li data-type="article">
+      <div class="meta"><span class="tag">Article</span>2025 · Discover Applied Sciences 7:1019</div>
+      <h3><a href="https://doi.org/10.1007/s42452-025-07277-7">Impacts of land-use change on carbon storage and sequestration in forest ecosystems in Benin</a></h3>
+      <p>Ahononga FC, <strong>Sonounameto RC</strong>, Akabassi GC, et al.</p>
+    </li>
+    <li data-type="article">
+      <div class="meta"><span class="tag">Article</span>2020 · Int J Biol Chem Sci 14(5):1716–33</div>
+      <h3>Socioeconomic factors determining ecosystem services local perceptions in two ecological zones in Benin (West Africa)</h3>
+      <p>Ahononga FC, Gouwakinnou GN, Biaou SSH, Biaou S, <strong>Sonounameto RC</strong>.</p>
+    </li>
+    <li data-type="article">
+      <div class="meta"><span class="tag">Article</span>2020 · Bull Rech Agron Bénin 30</div>
+      <h3>Facteurs d'affectation des terres et effets sur les services écosystémiques et la biodiversité : synthèse bibliographique</h3>
+      <p>Ahononga FC, Gouwakinnou GN, Biaou SSH, Biaou S, Ahouandjinou O, <strong>Sonounameto RC</strong>.</p>
     </li>
   </ul>
 </main>
@@ -61,14 +87,13 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="profile-card">
-      <img src="assets/avatar.svg" alt="">
-      <div><strong>Roland Christel Sonounameto</strong>PhD researcher, Swiss TPH</div>
+      <img src="assets/photo.jpg" alt="">
+      <div><strong>Roland Christel Sonounameto</strong>PhD fellow in Biometry · Cotonou, Benin</div>
     </div>
     <div class="social">
+      <a href="mailto:roland.sonounameto@outlook.com">Email</a>
+      <a href="https://www.linkedin.com/in/rolandsonounameto/">LinkedIn</a>
       <a href="https://github.com/rolandsonounameto">GitHub</a>
-      <a href="#">ORCID</a>
-      <a href="#">Google Scholar</a>
-      <a href="#">LinkedIn</a>
     </div>
     <div>© 2026 Roland Christel Sonounameto</div>
   </div>
@@ -81,7 +106,8 @@
       b.classList.add('active');
       var f = b.dataset.filter;
       document.querySelectorAll('#pub-list li').forEach(function (li) {
-        li.style.display = (f === 'all' || li.dataset.type === f) ? '' : 'none';
+        var types = li.dataset.type.split(' ');
+        li.style.display = (f === 'all' || types.indexOf(f) !== -1) ? '' : 'none';
       });
     });
   });
